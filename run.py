@@ -11,7 +11,7 @@ def solve(lines: list[str]) -> int:
         lines: список строк, представляющих лабиринт
 
     Returns:
-        минимальная энергия для достижения целевой конфигурации
+        мин энергия для достижения целевой конфигурации
     """
     # Парсинг входных данных
     rooms = [[], [], [], []]
@@ -30,7 +30,7 @@ def solve(lines: list[str]) -> int:
     # Стоимость перемещения
     costs = {'A': 1, 'B': 10, 'C': 100, 'D': 1000}
     # Целевые комнаты
-    target_room = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+    target_rom = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
     # Позиции входов в комнаты
     room_positions = [2, 4, 6, 8]
 
@@ -122,7 +122,7 @@ def solve(lines: list[str]) -> int:
 
             obj = hallway[hall_pos]
             obj_cost = costs[obj]
-            room_idx = target_room[obj]
+            room_idx = target_rom[obj]
             room = rooms[room_idx]
 
             # Проверяем, можно ли войти в комнату
